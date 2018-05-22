@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>GitblogComment Page</title>
+
+  <meta name="viewport" content="width=640, user-scalable=no">
+
+  <link rel="stylesheet" href="./test/style.css">
+
+  <link rel="stylesheet" href="./style/default.css">
+
+</head>
+
+<body>
+
+  <div>
+
+    <h1>Gitment GitblogComment</h1>
+
+    <p>This is the demo page for <a href="https://github.com/imsun/gitment" target="_blank">Gitment</a>.</p>
+
+    <p>You can login with GitHub and leave your comments below.</p>
+
+  </div>
+
+  <div id="container"></div>
+
+
+
+  <script src="./dist/gitment.browser.js"></script>
+
+  <script>
+
+    var clientId = '97b174d5a85bd86504e2'
+
+    var clientSecret = '9be88aef67728129eb39c368b100109690231260'
+
+    var gitment = new Gitment({
+
+      id: 'demo page',
+
+      owner: 'Lengsir',
+
+      repo: 'gitblogcomment',
+
+      oauth: {
+
+        client_id: clientId,
+
+        client_secret: clientSecret,
+
+      },
+
+    })
+
+
+
+    gitment.render('container')
+
+  </script>
+
+</body>
+
+</html>
